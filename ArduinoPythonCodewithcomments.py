@@ -10,7 +10,7 @@ def messageReceived(broker, obj, msg):
 	else : ser.write(“0”)
 
 #Connects to the local IP of my computer ~176.24.147.53, then when the arduino has connected to the server it receives the message
-client = mosquitto.Mosquitto(“Lights”)
+client = mosquitto.Mosquitto(“TierneyD”)
 client.connect(“176.24.147.53”)
 client.subscribe(“LightShow”)
 client.on_message = messageReceived
